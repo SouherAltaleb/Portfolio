@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/*--------- COLORS ----------*/
+
+/* :root {
+  --color-bg-dark: #1A1423;
+  --color-bg-secondary: #372549;
+  --color-accent: #774C60;
+  --color-primary: #B75D69;
+  --color-bg-light: #EACDC2;
+} */
+:root {
+  --bg: #eacdc2;
+  --text: #1a1423;
+  --primary: #b75d69;
+  --accent: #774c60;
+}
+
+.dark {
+  --bg: #1a1423;
+  --text: #eacdc2;
+  --primary: #b75d69;
+  --accent: #372549;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
