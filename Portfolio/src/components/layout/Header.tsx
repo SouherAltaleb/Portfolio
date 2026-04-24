@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLanguage } from "../../lib/useLanguage";
+import { useLanguage } from "../../i18n/useLanguage";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -9,23 +9,33 @@ const Header = () => {
 
   function toggleTheme() {
     const root = document.documentElement;
-    const next = theme === "dark" ? "light" : "dark";
+    const isDark = root.classList.contains("dark");
 
-    root.dataset.theme = next;
-    localStorage.setItem("theme", next);
-    setTheme(next);
+    if (isDark) {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+    } else {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    }
   }
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    if (saved) {
-      document.documentElement.dataset.theme = saved;
-      setTheme(saved);
+
+    if (saved === "dark") {
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      setTheme("light");
     }
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg ">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-semibold tracking-tight">
