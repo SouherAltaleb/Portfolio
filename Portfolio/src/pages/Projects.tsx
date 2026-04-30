@@ -75,6 +75,25 @@ export default function Projects() {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+  // sections mit bild
+  const sections = [
+    {
+      title: "Concept",
+      text: "Modern immersive experience.",
+      image: "/images/p1.jpg"
+    },
+    {
+      title: "Technical Setup",
+      text: "Built with modern stack.",
+      image: "/images/p2.jpg"
+    },
+    {
+      title: "Result",
+      text: "Fast & interactive UI.",
+      image: "/images/p3.jpg"
+    }
+  ];
+
   return (
     <section className=" text-white min-h-screen px-10 py-20">
       <h1 className="text-4xl md:text-5xl font-bold mb-4 text-(--text) pb-4"> Projekte </h1>
