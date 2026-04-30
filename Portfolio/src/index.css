@@ -16,7 +16,7 @@
   --accent: #372549;
 }
 
-.sun {
+.dark {
   --bg: #eacdc2;
   --text: #1a1423;
   --primary: #b75d69;
@@ -54,4 +54,47 @@ h2,
 h3 {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
+}
+h1,
+h2 {
+  letter-spacing: -0.03em;
+}
+
+p {
+  line-height: 1.6;
+}
+/*--------- HOME ----------*/
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease forwards;
+}
+/* mouse  */
+body {
+  cursor: none;
 }

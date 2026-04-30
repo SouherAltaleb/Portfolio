@@ -5,10 +5,12 @@ import MainLayout from "./components/layout/MainLayout";
 import Home from "./pages/Home.tsx";
 import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
+import CustomCursor from "./components/ui/CustomCursor.tsx";
 
 function App() {
   return (
     <>
+      <CustomCursor />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
