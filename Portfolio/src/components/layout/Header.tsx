@@ -3,7 +3,7 @@ import { useLanguage } from "../../i18n/useLanguage";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { lang, setLang, t } = useLanguage();
+  const { setLang, t } = useLanguage();
   // dark mode toggle
   const [theme, setTheme] = useState(document.documentElement.dataset.theme || "light");
 
@@ -53,12 +53,14 @@ const Header = () => {
         {/* Actions */}
         <div className="flex items-center gap-4">
           {/* Language */}
-          <button
+          <button onClick={() => setLang("de")}>DE</button>
+          <button onClick={() => setLang("en")}>EN</button>
+          {/* <button
             onClick={() => setLang(lang === "en" ? "de" : "en")}
             className="text-xs border px-2 py-1 rounded-md"
           >
             {lang.toUpperCase()}
-          </button>
+          </button> */}
 
           {/* Theme */}
           {/* <button onClick={toggleTheme}>

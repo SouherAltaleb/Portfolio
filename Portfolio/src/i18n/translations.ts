@@ -1,16 +1,20 @@
 export const translations = {
   en: {
+    // Menü
     home: "Home",
     projects: "Projects",
     skills: "Skills",
     contact: "Contact",
-    greeting: "Hi, I'm Souher",
+    // Hero
+    greeting: "Hi, I'm Souher"
   },
   de: {
+    // Menü
     home: "Start",
     projects: "Projekte",
     skills: "Fähigkeiten",
     contact: "Kontakt",
-    greeting: "Hi, ich bin Souher",
-  },
+    // Hero
+    greeting: "Hallo, ich bin Souher"
+  }
 };
