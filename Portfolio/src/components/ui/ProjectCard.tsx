@@ -21,10 +21,21 @@
 // }
 import { motion } from "framer-motion";
 
+type Section = {
+  title: string;
+  text: string;
+  image: string;
+};
+
 type Project = {
-  id: number;
+  slug: string;
   title: string;
   image: string;
+  desc: string;
+  sections?: {
+    en: Section[];
+    de: Section[];
+  };
 };
 
 type Props = {
@@ -37,7 +48,7 @@ export default function ProjectCard({ project, onClick }: Props) {
     <div onClick={onClick} data-cursor="view" className="cursor-pointer group relative">
       <div className="overflow-hidden rounded-2xl">
         <motion.img
-          layoutId={`image-${project.id}`} // ✅ صح
+          layoutId={`image-${project.slug}`}
           src={project.image}
           alt={project.title}
           className="w-full h-80 object-cover transition duration-700 group-hover:scale-110"

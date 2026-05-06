@@ -76,6 +76,7 @@ import Projects from "./Projects.tsx";
 
 const Home = () => {
   const { t } = useLanguage();
+
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
   // 🌟 particles ثابتة
@@ -111,7 +112,7 @@ const Home = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
       {/* ✨ Cursor Glow */}
       <div
-        className="pointer-events-none fixed w-[300px] h-[300px] rounded-full blur-[120px] opacity-30 z-50"
+        className="pointer-events-none fixed w-75 h-75ded-full blur-[120px] opacity-30 z-50"
         style={{
           background: "var(--primary)",
           transform: `translate(${pos.x * 5 + window.innerWidth / 2}px, ${
@@ -122,7 +123,7 @@ const Home = () => {
 
       {/* 🌌 LAYER 1 */}
       <div
-        className="absolute w-[700px] h-[700px] bg-[var(--primary)] opacity-20 blur-[180px] -z-10"
+        className="absolute w-175 h-175[var(--primary)] opacity-20 blur-[180px] -z-10"
         style={{
           transform: `translate(${pos.x * 0.2}px, ${pos.y * 0.2}px)`
         }}
@@ -130,7 +131,7 @@ const Home = () => {
 
       {/* 🌌 LAYER 2 */}
       <div
-        className="absolute w-[400px] h-[400px] bg-[var(--accent)] opacity-30 blur-[120px] -z-10"
+        className="absolute w-100 h-100 bg-(--accent) opacity-30 blur-[120px] -z-10"
         style={{
           transform: `translate(${pos.x * -0.4}px, ${pos.y * -0.4}px)`
         }}
@@ -159,14 +160,14 @@ const Home = () => {
       >
         <p className="text-sm opacity-70 mb-2">Media Designer & Developer</p>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">{t.greeting}</h1>
+        <h1 className="text-5xl md:text-7xl font-bold mb-4"> {t.greeting} </h1>
 
         <p className="max-w-xl opacity-80 mb-8">
           Ich entwickle moderne Webseiten mit kreativem Design, Animation und sauberem Code.
         </p>
 
         <div className="flex gap-4 justify-center">
-          <button className="px-6 py-3 rounded-xl bg-[var(--primary)] hover:scale-105 transition">
+          <button className="px-6 py-3 rounded-xl bg-(--primary) hover:scale-105 transition">
             {t.projects}
           </button>
 
