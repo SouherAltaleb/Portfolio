@@ -5,6 +5,7 @@ export const translations = {
     projects: "Projects",
     skills: "Skills",
     contact: "Contact",
+
     // Hero
     greeting: "Hi, I'm Souher",
     subtitle: "Media Designer & Developer",
@@ -13,7 +14,12 @@ export const translations = {
     button_contact: "Contact Me",
 
     //skills
-    headline: "My Skills"
+    headline: "My Skills",
+
+    //contact
+    headline_contact: "Get in Touch",
+    titleTop: "Let’s bring",
+    titleBottom: "ideas to life."
   },
   de: {
     // Menü
@@ -29,6 +35,11 @@ export const translations = {
     button_contact: "Kontaktieren",
 
     //skills
-    headline: "Meine Fähigkeiten"
+    headline: "Meine Fähigkeiten",
+
+    //contact
+    headline_contact: "Kontakt",
+    titleTop: "Lass uns",
+    titleBottom: "Ideen zum Leben erwecken."
   }
 };

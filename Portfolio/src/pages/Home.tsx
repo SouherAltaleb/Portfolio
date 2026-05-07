@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../i18n/useLanguage";
 import Projects from "./Projects.tsx";
 import SkillsSection from "./Skills.tsx";
+import ContactSection from "./Contact.tsx";
 
 const Home = () => {
   const { t } = useLanguage();
@@ -120,6 +121,7 @@ const Home = () => {
         <Projects />
       </div>
       <SkillsSection />
+      <ContactSection />
     </section>
   );
 };
