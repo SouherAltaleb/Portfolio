@@ -14,6 +14,7 @@
   --text: #eacdc2;
   --primary: #b75d69;
   --accent: #372549;
+  --hell: #f4f0f0;
 }
 
 .dark {
@@ -21,6 +22,7 @@
   --text: #1a1423;
   --primary: #b75d69;
   --accent: #774c60;
+  --hell: #f4f0f0;
 }
 
 html,
