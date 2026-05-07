@@ -79,7 +79,7 @@ const Header = () => {
             ].join(" ")}
           >
             <img
-              src={theme === "dark" ? "/icons/sun.svg" : "/icons/moon.svg"}
+              src={theme === "dark" ? "/icons/sun.svg" : "/icons/moon-full.svg"}
               alt=""
               className="h-7 w-7 transition-all duration-300"
             />
