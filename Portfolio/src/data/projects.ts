@@ -2,8 +2,12 @@ export const projects = [
   {
     slug: "diary",
     title: "My Diary App",
-    image: "/projects/diary.png",
+    image: "/projects/test.jpg",
     desc: "Tagebuch-App für Gedanken, Notizen und Momente",
+    github: "https://github.com/...",
+    live: "https://...",
+    tech: ["React", "TypeScript", "Tailwind"],
+    features: ["Animated UI", "Responsive design", "Dark/Light mode"],
 
     sections: {
       en: [
@@ -53,12 +57,16 @@ export const projects = [
       ]
     }
   },
-
+  // 2nd project
   {
     slug: "sakura",
     title: "SakuraBloom",
     image: "/projects/sakura.png",
     desc: "Digitale Lernwelt für Kinder rund um Sicherheit im Internet",
+    github: "https://github.com/...",
+    live: "https://...",
+    tech: ["React", "TypeScript", "Tailwind", "MongoDB", "Node.js", "Express"],
+    features: ["Interaktive Lernmodule", "Minispiele", "Szenario-basierte Quizze"],
 
     sections: {
       en: [
@@ -118,12 +126,17 @@ export const projects = [
       ]
     }
   },
-
+  // 3rd project
   {
     slug: "chiart",
     title: "ChiArt",
     image: "/projects/chiart.png",
     desc: "Interaktive Kunst-App zum Entdecken",
+    github: "https://github.com/...",
+    live: "https://...",
+    tech: ["React", "TypeScript", "Tailwind"],
+    features: ["Interaktive Kunstwerke", "Benutzerdefinierte Sammlungen", "Teilen von Kunstwerken"],
+
     sections: {
       en: [
         {
@@ -172,12 +185,17 @@ export const projects = [
       ]
     }
   },
-
+  // 4th project
   {
     slug: "luna",
     title: "Luna Mode",
     image: "/projects/lunamode.png",
     desc: "Digitale Modeplattform",
+    github: "https://github.com/...",
+    live: "https://...",
+    tech: ["HTML", "CSS"],
+    features: ["Interaktive Mode-Elemente", "Benutzerdefinierte Outfits", "Teilen von Looks"],
+
     sections: {
       en: [
         {
@@ -226,12 +244,16 @@ export const projects = [
       ]
     }
   },
-
+  // 5th project
   {
     slug: "popcorn",
     title: "Popcorn Diary",
     image: "/projects/popcorn.png",
     desc: "Film-Tagebuch zum Bewerten und Entdecken",
+    github: "https://github.com/...",
+    live: "https://...",
+    tech: ["React", "Vanilla JavaScript", "Tailwind", "LocalStorage"],
+    features: ["Filme bewerten", "Filme entdecken", "Persönliche Notizen"],
     sections: {
       en: [
         {
