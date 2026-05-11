@@ -6,6 +6,7 @@ import Home from "./pages/Home.tsx";
 import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
 import CustomCursor from "./components/ui/CustomCursor.tsx";
+import Skills from "./pages/Skills.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>

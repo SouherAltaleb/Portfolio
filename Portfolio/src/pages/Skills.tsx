@@ -13,7 +13,8 @@ const skills = [
       { name: "React", icon: <img src="/icons/react.svg" /> },
       { name: "TypeScript", icon: <img src="/icons/typescript.svg" /> },
       { name: "Next.js", icon: <img src="/icons/nextjs.svg" /> },
-      { name: "Bootstrap", icon: <img src="/icons/bootstrap.svg" /> }
+      { name: "Bootstrap", icon: <img src="/icons/bootstrap.svg" /> },
+      { name: "WordPress", icon: <img src="/icons/wordpress.svg" /> }
     ]
   },
   {
@@ -42,18 +43,25 @@ const skills = [
     ]
   },
   {
-    title: "Design & Tools",
+    title: "Design",
     items: [
       { name: "Figma", icon: <img src="/icons/figma.svg" /> },
       { name: "Adobe XD", icon: <img src="/icons/xd.svg" /> },
       { name: "Photoshop", icon: <img src="/icons/photoshop.svg" /> },
       { name: "Illustrator", icon: <img src="/icons/illustrator.svg" /> },
       { name: "InDesign", icon: <img src="/icons/indesign.svg" /> },
-      { name: "WordPress", icon: <img src="/icons/wordpress.svg" /> },
+      { name: "Lightroom", icon: <img src="/icons/lightroom.svg" /> },
+      { name: "Animate", icon: <img src="/icons/animate.svg" /> }
+    ]
+  },
+  {
+    title: "Tools",
+    items: [
       { name: "Git", icon: <img src="/icons/git.svg" /> },
       { name: "GitHub", icon: <img src="/icons/github.svg" /> },
       { name: "VS Code", icon: <img src="/icons/vscode.svg" /> },
-      { name: "Vite", icon: <img src="/icons/vitejs.svg" /> }
+      { name: "Vite", icon: <img src="/icons/vitejs.svg" /> },
+      { name: "Postman", icon: <img src="/icons/postman.svg" /> }
     ]
   }
 ];
@@ -64,7 +72,7 @@ export default function SkillsSection() {
 
   return (
     <section ref={ref} className="w-full" style={{ background: "var(--bg)", color: "var(--text)" }}>
-      <div className="max-w-6xl mx-auto px-6 py-28">
+      <div className="max-w-7xl mx-auto px-6 py-28">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,11 +102,7 @@ export default function SkillsSection() {
                     key={item.name}
                     whileHover={{ y: -6, scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full border text-sm cursor-default"
-                    style={{
-                      borderColor: "rgba(234,205,194,0.2)",
-                      background: "rgba(255,255,255,0.03)"
-                    }}
+                    className="flex items-center gap-2 px-4 py-2 rounded-full border text-sm border-(--text)/50 "
                   >
                     {/* YOUR CUSTOM ICON SLOT */}
                     {item.icon && (

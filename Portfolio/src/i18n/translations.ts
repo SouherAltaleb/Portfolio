@@ -7,11 +7,14 @@ export const translations = {
     contact: "Contact",
 
     // Hero
-    greeting: "Hi, I'm Souher",
-    subtitle: "Media Designer & Developer",
-    text: "I create modern websites with creative design, animation and clean code.",
+    // greeting: "Hi, I'm Souher",
+    // subtitle: "Media Designer & Developer",
+    // text: "I create modern websites with creative design, animation and clean code.",
+    subtitle: "Creative Developer • Designer • Illustrator",
+    big_title: "Building digital experiences.",
+    text: "I create immersive interfaces blending development, design, and illustration into modern digital experiences.",
     button: "View certificates",
-    button_contact: "Contact Me",
+    cv_button: "View CV",
 
     //skills
     headline: "My Skills",
@@ -28,11 +31,16 @@ export const translations = {
     skills: "Fähigkeiten",
     contact: "Kontakt",
     // Hero
-    greeting: "Hallo, ich bin Souher",
-    subtitle: "Mediengestalterin & Entwicklerin",
-    text: "Ich entwickle moderne Webseiten mit kreativem Design, Animation und sauberem Code.",
+    // greeting: "Hallo, ich bin Souher",
+    // subtitle: "Mediengestalterin & Entwicklerin",
+    // text: "Ich entwickle moderne Webseiten mit kreativem Design, Animation und sauberem Code.",
+    // button: "Zertifikate ansehen",
+    // button_contact: "Kontaktieren",
+    subtitle: "Creative Developer • Designer • Illustrator",
+    big_title: "Digitale Experiences gestalten.",
+    text: "Ich kreiere immersive Interfaces, die Entwicklung, Design und Illustration zu modernen digitalen Erlebnissen verschmelzen.",
     button: "Zertifikate ansehen",
-    button_contact: "Kontaktieren",
+    cv_button: "Lebenslauf",
 
     //skills
     headline: "Meine Fähigkeiten",
