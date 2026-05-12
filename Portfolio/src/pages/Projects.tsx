@@ -76,12 +76,15 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "../components/ui/ProjectCard";
-import { projects } from "../data/projects";
+import { projects, type Project } from "../data/projects";
 import { useLanguage } from "../i18n/useLanguage";
 
 export default function Projects() {
-  const [active, setActive] = useState<any | null>(null);
+  const [active, setActive] = useState<Project | null>(null); // Fix: any → Project
   const { lang } = useLanguage();
+
+  // Fix: lang als Key für sections
+  const sections = active?.sections?.[lang as "en" | "de"];
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -92,7 +95,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto  min-h-screen px-10 py-20">
+    <section className="max-w-7xl mx-auto min-h-screen px-10 py-20">
       <h1 className="text-5xl font-bold mb-12">Projekte</h1>
 
       {/* GRID */}
@@ -102,25 +105,38 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* SIMPLE MODAL */}
+      {/* MODAL */}
       <AnimatePresence>
         {active && (
           <motion.div
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-10"
+            className="fixed inset-0 z-50 backdrop-blur-xl flex items-center justify-center p-10"
+            style={{ backgroundColor: "rgba(0,0,0,0.85)" }} // Fix: bg-(--primary)90 ist kein gültiges Tailwind
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setActive(null)}
           >
             <motion.div
-              className="max-w-3xl w-full space-y-6"
+              className="max-w-3xl w-full space-y-6 overflow-y-auto max-h-[90vh]"
               onClick={e => e.stopPropagation()}
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.95 }}
             >
+              {/* CLOSE */}
+              <button
+                onClick={() => setActive(null)}
+                className="fixed top-6 right-6 text-white text-3xl"
+              >
+                ✕
+              </button>
+
               {/* IMAGE */}
-              <img src={active.image} className="w-full h-96 object-cover rounded-2xl" />
+              <img
+                src={active.image}
+                alt={active.title}
+                className="w-full h-96 object-cover rounded-2xl"
+              />
 
               {/* TITLE */}
               <h2 className="text-4xl font-bold">{active.title}</h2>
@@ -131,7 +147,7 @@ export default function Projects() {
               {/* TECH */}
               {active.tech && (
                 <div className="flex flex-wrap gap-2">
-                  {active.tech.map((t: string) => (
+                  {active.tech.map(t => (
                     <span key={t} className="px-3 py-1 bg-white/10 rounded-full text-sm">
                       {t}
                     </span>
@@ -142,11 +158,21 @@ export default function Projects() {
               {/* FEATURES */}
               {active.features && (
                 <ul className="list-disc pl-5 text-gray-300">
-                  {active.features.map((f: string) => (
+                  {active.features.map(f => (
                     <li key={f}>{f}</li>
                   ))}
                 </ul>
               )}
+
+              {/* SECTIONS (falls vorhanden) */}
+              {sections &&
+                sections.map(s => (
+                  <div key={s.title} className="space-y-2">
+                    <h3 className="text-2xl font-semibold">{s.title}</h3>
+                    <p className="text-gray-300">{s.text}</p>
+                    <img src={s.image} alt={s.title} className="w-full rounded-xl" />
+                  </div>
+                ))}
             </motion.div>
           </motion.div>
         )}

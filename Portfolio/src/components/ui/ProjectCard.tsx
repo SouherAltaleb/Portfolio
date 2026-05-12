@@ -47,19 +47,13 @@
 
 // #2 Design
 import { motion } from "framer-motion";
-import { Link, ExternalLink } from "lucide-react";
+import type { Project } from "../../data/projects";
 
-type Project = {
-  slug: string;
-  title: string;
-  image: string;
-  desc: string;
-  github?: string;
-  live?: string;
-  tech?: string[];
+export type Props = {
+  project: Project;
+  onClick: () => void;
 };
-
-export default function ProjectCard({ project, onClick }: any) {
+export default function ProjectCard({ project, onClick }: Props) {
   return (
     <div onClick={onClick} className="group relative cursor-pointer overflow-hidden rounded-2xl">
       {/* IMAGE */}
@@ -69,9 +63,16 @@ export default function ProjectCard({ project, onClick }: any) {
       />
 
       {/* DARK GRADIENT OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500" />
-
+      <div className="absolute inset-0 bg-linear-to-t from-(--accent) via-black/60 to-transparent translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500" />
+      {/* COLLAB BADGE – oben rechts, nur bei hover */}
+      {project.collab && (
+        <span className="absolute top-4 right-4 z-10 flex items-center gap-1 text-xs bg-brown text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <img src="/icons/team.svg" className="w-5 h-5 pb-1" />
+          Teamarbeit
+        </span>
+      )}
       {/* CONTENT */}
+
       <div className="absolute bottom-0 left-0 w-full p-6 text-white">
         {/* TITLE */}
         <h3 className="text-2xl font-semibold translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
@@ -101,7 +102,7 @@ export default function ProjectCard({ project, onClick }: any) {
               onClick={e => e.stopPropagation()}
               className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
             >
-              <Link size={18} />
+              <img src="/icons/github_outline.svg" className="w-5 h-5" />
             </a>
           )}
 
@@ -112,7 +113,7 @@ export default function ProjectCard({ project, onClick }: any) {
               onClick={e => e.stopPropagation()}
               className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
             >
-              <ExternalLink size={18} />
+              <img src="/icons/view.svg" className="w-5 h-5" />
             </a>
           )}
         </div>
