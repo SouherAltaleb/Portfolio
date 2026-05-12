@@ -10,14 +10,6 @@ const Home = () => {
 
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
-  // 🌟 particles ثابتة
-  const [particles] = useState(() =>
-    Array.from({ length: 20 }, () => ({
-      top: Math.random() * 100,
-      left: Math.random() * 100
-    }))
-  );
-
   useEffect(() => {
     let frame: number;
 

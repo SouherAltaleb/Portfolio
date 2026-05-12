@@ -2,13 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 type LanguageToggleProps = {
-  setLang: (lang: string) => void;
+  setLang: (lang: "en" | "de") => void;
 };
 
 export default function LanguageToggle({ setLang }: LanguageToggleProps) {
-  const [active, setActive] = useState("en");
+  const [active, setActive] = useState<"en" | "de">("en");
 
-  const changeLang = lang => {
+  const changeLang = (lang: "en" | "de") => {
     setActive(lang);
     setLang(lang);
   };
