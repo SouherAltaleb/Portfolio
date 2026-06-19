@@ -81,7 +81,7 @@ import { useLanguage } from "../i18n/useLanguage";
 
 export default function Projects() {
   const [active, setActive] = useState<Project | null>(null); // Fix: any → Project
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
 
   // Fix: lang als Key für sections
   const sections = active?.sections?.[lang as "en" | "de"];
@@ -96,7 +96,7 @@ export default function Projects() {
 
   return (
     <section className="max-w-7xl mx-auto min-h-screen px-10 py-20">
-      <h1 className="text-5xl font-bold mb-12">Projekte</h1>
+      <h1 className="text-5xl font-bold mb-12">{t.headline_projects}</h1>
 
       {/* GRID */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
