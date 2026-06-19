@@ -14,7 +14,9 @@ export const translations = {
     big_title: "Building digital experiences.",
     text: "I create immersive interfaces blending development, design, and illustration into modern digital experiences.",
     button: "View certificates",
-    cv_button: "View CV",
+    portfolio_button: "View Design Portfolio",
+    //projekte
+    headline_projects: "My Projects",
 
     //skills
     headline: "My Skills",
@@ -40,7 +42,10 @@ export const translations = {
     big_title: "Digitale Experiences gestalten.",
     text: "Ich kreiere immersive Interfaces, die Entwicklung, Design und Illustration zu modernen digitalen Erlebnissen verschmelzen.",
     button: "Zertifikate ansehen",
-    cv_button: "Lebenslauf",
+    portfolio_button: "Design Portfolio",
+
+    //projekte
+    headline_projects: "Meine Projekte",
 
     //skills
     headline: "Meine Fähigkeiten",

@@ -122,7 +122,7 @@ const Home = () => {
                 </span>
               </a>
 
-              {/* cv btn */}
+              {/* portfolio btn */}
               <button
                 className="
       group
@@ -138,12 +138,12 @@ const Home = () => {
     "
               >
                 <a
-                  href="/cv.pdf"
+                  href="/portfolio.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
-                  {t.cv_button}
+                  {t.portfolio_button}
 
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     →

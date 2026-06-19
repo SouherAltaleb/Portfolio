@@ -29,7 +29,7 @@ export const projects: Project[] = [
     github: "https://github.com/SouherAltaleb/My-Diary",
     live: "https://my-diary-5cxj.onrender.com/",
     tech: ["React", "TypeScript", "Tailwind"],
-    features: ["Animated UI", "Responsive design", "Dark/Light mode"]
+    features: ["Einträge erstellen & speichern", "Responsive design","Animierte Übergänge" ] ,
   },
   {
     slug: "sakura",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     live: "https://sakurabloom.onrender.com/",
     tech: ["React", "TypeScript", "Tailwind", "MongoDB", "Node.js", "Express"],
     features: ["Interaktive Lernmodule", "Minispiele", "Szenario-basierte Quizze"],
-    collab: true
+    collab: true,
   },
   {
     slug: "chiart",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     github: "https://github.com/SouherAltaleb/ChiArt",
     live: "https://chiart-u6r7.onrender.com/",
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    features: ["Interaktive Kunstwerke", "Benutzerdefinierte Sammlungen", "Teilen von Kunstwerken"]
+    features: ["Interaktive Kunstwerke", "Benutzerdefinierte Sammlungen", "Teilen von Kunstwerken"],
   },
   {
     slug: "luna",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     live: "https://dariakozlova-web.github.io/First-project/#home",
     tech: ["HTML", "CSS"],
     features: ["Interaktive Mode-Elemente", "Benutzerdefinierte Outfits", "Teilen von Looks"],
-    collab: true
+    collab: true,
   },
   {
     slug: "popcorn-diary",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     live: "https://moviediary-2.onrender.com/index.html",
     tech: ["React", "Vanilla JavaScript", "Tailwind", "LocalStorage"],
     features: ["Filme bewerten", "Filme entdecken", "Persönliche Notizen"],
-    collab: true
+    collab: true,
   },
   {
     slug: "kloster-schwarzenfels",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       "Sticky Header mit Scroll-Effekt",
       "Anmeldeformular mit Validierung",
       "Barrierefreiheit: Schriftgröße & Grauton-Modus",
-      "Responsives Layout für alle Geräte"
-    ]
-  }
+      "Responsives Layout für alle Geräte",
+    ],
+  },
 ];
